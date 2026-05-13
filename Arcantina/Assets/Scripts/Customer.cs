@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-
+//melegszex
 public abstract class Customer : MonoBehaviour
 {
     public RECIPES recipe_name;
