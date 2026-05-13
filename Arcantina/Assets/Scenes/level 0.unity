@@ -553,7 +553,7 @@ GameObject:
   - component: {fileID: 119327632}
   m_Layer: 0
   m_Name: BottlingRoomCamera
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -645,7 +645,7 @@ GameObject:
   - component: {fileID: 246995838}
   m_Layer: 0
   m_Name: PreppingRoomCamera
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1632,8 +1632,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 659900643}
-        m_TargetAssemblyTypeName: Magistrix_enikus, Assembly-CSharp
+      - m_Target: {fileID: 479645512}
+        m_TargetAssemblyTypeName: Char1, Assembly-CSharp
         m_MethodName: selectRecipe_1
         m_Mode: 1
         m_Arguments:
@@ -1822,6 +1822,75 @@ Transform:
   - {fileID: 361581583}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &479645510
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 479645511}
+  - component: {fileID: 479645512}
+  - component: {fileID: 479645513}
+  m_Layer: 0
+  m_Name: Character-1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &479645511
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479645510}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1069176105}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &479645512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479645510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 920be7bca85f6964f9a0331e02dd661c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recipeName: 0
+  animator: {fileID: 659900644}
+  isFinished: 0
+  isTurn: 1
+  startCook: 0
+  selectedRecipe: 0
+  cookedfor: 0
+  cooktimer: {fileID: 1229845420}
+--- !u!114 &479645513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479645510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00f6c2929f566324b9de6d7c02259b16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WaitingRoomCam: {fileID: 519420031}
+  PrepRoomCam: {fileID: 246995837}
+  CookingRoomCam: {fileID: 608544009}
+  BottlingRoomCam: {fileID: 119327631}
 --- !u!1 &490556246
 GameObject:
   m_ObjectHideFlags: 0
@@ -2599,9 +2668,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 659900643}
-        m_TargetAssemblyTypeName: Magistrix_enikus, Assembly-CSharp
-        m_MethodName: setBottle_2
+      - m_Target: {fileID: 479645512}
+        m_TargetAssemblyTypeName: Char1, Assembly-CSharp
+        m_MethodName: Bottle2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2796,7 +2865,7 @@ GameObject:
   - component: {fileID: 608544010}
   m_Layer: 0
   m_Name: CookingRoomCamera
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3094,20 +3163,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2de3ae044b6e50c4b8db9c4475ae0e35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 659900644}
-  recipeName: 0
-  speechText: {fileID: 0}
-  TextBubble: {fileID: 0}
-  CookCamera: {fileID: 608544009}
-  PrepCamera: {fileID: 246995837}
-  BottleCamera: {fileID: 119327631}
-  WaitingCamera: {fileID: 519420031}
-  isfinished: 0
-  isturn: 1
-  startCook: 0
-  selectedRecipe: 0
-  cookedfor: 0
-  cooktimer: {fileID: 1229845420}
 --- !u!95 &659900644
 Animator:
   serializedVersion: 5
@@ -4358,8 +4413,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 659900643}
-        m_TargetAssemblyTypeName: Magistrix_enikus, Assembly-CSharp
+      - m_Target: {fileID: 479645512}
+        m_TargetAssemblyTypeName: Char1, Assembly-CSharp
         m_MethodName: stopCooking
         m_Mode: 1
         m_Arguments:
@@ -5887,20 +5942,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2de3ae044b6e50c4b8db9c4475ae0e35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 659900644}
-  recipeName: 0
-  speechText: {fileID: 1608051913}
-  TextBubble: {fileID: 0}
-  CookCamera: {fileID: 608544009}
-  PrepCamera: {fileID: 246995837}
-  BottleCamera: {fileID: 119327631}
-  WaitingCamera: {fileID: 519420031}
-  isfinished: 0
-  isturn: 1
-  startCook: 0
-  selectedRecipe: 0
-  cookedfor: 0
-  cooktimer: {fileID: 1229845420}
 --- !u!4 &1069176105
 Transform:
   m_ObjectHideFlags: 0
@@ -5913,7 +5954,8 @@ Transform:
   m_LocalPosition: {x: 8.668316, y: -3.7344503, z: -50.529938}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 479645511}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1080507724
@@ -6451,9 +6493,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 659900643}
-        m_TargetAssemblyTypeName: Magistrix_enikus, Assembly-CSharp
-        m_MethodName: setBottle_1
+      - m_Target: {fileID: 479645512}
+        m_TargetAssemblyTypeName: Char1, Assembly-CSharp
+        m_MethodName: Bottle1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8282,9 +8324,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 659900643}
-        m_TargetAssemblyTypeName: Magistrix_enikus, Assembly-CSharp
-        m_MethodName: setBottle_3
+      - m_Target: {fileID: 479645512}
+        m_TargetAssemblyTypeName: Char1, Assembly-CSharp
+        m_MethodName: Bottle3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

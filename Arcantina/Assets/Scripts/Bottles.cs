@@ -4,5 +4,6 @@ public enum BOTTLE
     BOTTLE2,
     BOTTLE3,
     BOTTLE4,
-    BOTTLE5
+    BOTTLE5,
+    EMPTY
 }
