@@ -1,22 +1,11 @@
-
-using System;
-using TMPro;
-using Unity.VisualScripting;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-
-public class Magistrix_enikus : MonoBehaviour {
-    //VARIABLES
+/*    //VARIABLES
     public Animator animator;
     [SerializeField] public RECIPES recipeName;
     private Recipe recipe;
-    [SerializeField] private TextMeshProUGUI speechText;
-    [SerializeField] private GameObject TextBubble;
     [SerializeField] private Camera CookCamera;
     [SerializeField] private Camera PrepCamera;
     [SerializeField] private Camera BottleCamera;
     [SerializeField] private Camera WaitingCamera;
-    static String tell = "MMMMMM MEN KISSING MMMMMM AKSFOENH";
 
     //CONTROL THINGIES BECAUSE I DONT KNOW HOW TO SEPARATE THESE SO EVERYTHING IS IN ONE FILE YEY :DDD
     public bool isfinished = false;
@@ -33,7 +22,6 @@ public class Magistrix_enikus : MonoBehaviour {
     void Start() {
         recipe = Recipe.recipe_factory(recipeName);
         animator.Play("Forward_E");
-        speechText.text = tell;
     }
 
     void Update() {
@@ -118,5 +106,4 @@ public class Magistrix_enikus : MonoBehaviour {
         isfinished = true;
     }
 
-    
-}
+    */

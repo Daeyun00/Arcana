@@ -9,7 +9,7 @@ public class RoomController : MonoBehaviour
     public Camera CookingRoomCam;
     public Camera BottlingRoomCam;
 
-    void Start() {
+    void Awake() {
         Camera_to_Waiting_room();
     }
     public void Camera_to_Waiting_room()
