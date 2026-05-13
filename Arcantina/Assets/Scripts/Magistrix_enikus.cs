@@ -34,7 +34,6 @@ public class Magistrix_enikus : MonoBehaviour {
         recipe = Recipe.recipe_factory(recipeName);
         animator.Play("Forward_E");
         speechText.text = tell;
-        TextBubble.SetActive(true);
     }
 
     void Update() {
@@ -118,4 +117,6 @@ public class Magistrix_enikus : MonoBehaviour {
         selectedBottle = BOTTLE.BOTTLE3;
         isfinished = true;
     }
+
+    
 }

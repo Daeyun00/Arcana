@@ -1,3 +1,3 @@
 public enum RECIPES {
-    PISS1
+    PISS1,
 }
