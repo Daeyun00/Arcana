@@ -26,15 +26,17 @@ public class GameController : MonoBehaviour {
         if(character_1.isTurn && character_1.isFinished) {
 
             todays_points += character_1.Points(todays_points);
-            character_1.isTurn = false;
+            character_1.isTurn = false; 
             character_2.isTurn = true;
             
         }
+
         if(character_2.isTurn && character_2.isFinished) {
             todays_points += character_2.Points(todays_points);
             character_2.isTurn = false;
             character_3.isTurn = true;
         }
+        
         if(character_3.isTurn && character_3.isFinished) {
             todays_points += character_3.Points(todays_points);
             character_3.isTurn = false;
