@@ -16,8 +16,10 @@ public class Recipe {
 
     public static Recipe recipe_factory(RECIPES name) {
         switch (name) {
-            case RECIPES.PISS1: return new Recipe(COOKING_TIME.LIGHT, BOTTLE.BOTTLE2, RECIPES.PISS1);
-            default: return new Recipe(COOKING_TIME.LONG, BOTTLE.BOTTLE1, RECIPES.PISS1);  
+            case RECIPES.HEALING: return new Recipe(COOKING_TIME.LIGHT, BOTTLE.BOTTLE2, RECIPES.HEALING);
+            case RECIPES.LOVE: return new Recipe(COOKING_TIME.LONG, BOTTLE.BOTTLE1, RECIPES.LOVE);
+            case RECIPES.AMNESIA: return new Recipe(COOKING_TIME.MEDIUM, BOTTLE.BOTTLE1, RECIPES.AMNESIA);
+            default: return new Recipe(COOKING_TIME.LIGHT, BOTTLE.BOTTLE1, RECIPES.HEALING);  
         }
         
     }

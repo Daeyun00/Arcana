@@ -7,7 +7,7 @@ public class Char2 : MonoBehaviour
     //VARIABLES
     [SerializeField] RECIPES recipeName;
     Recipe recipe;
-    [SerializeField] Animator animator;
+    [SerializeField] public Animator animator;
     public bool isFinished = false;
     public bool animationPlayed = false;
     public bool isTurn = false;
@@ -24,11 +24,9 @@ public class Char2 : MonoBehaviour
     void Start() {
         recipe = Recipe.recipe_factory(recipeName);
         cameraChange = GetComponent<RoomController>();
+        animator.Play("Forward_J"); //REPLACE
     }
     void Update() {
-        if(!animationPlayed && isTurn) {
-            animator.Play("Forward_E");
-        }
         //COOKING UWU
         if (startCook) {
             if (startCook) {
@@ -89,7 +87,7 @@ public class Char2 : MonoBehaviour
 
     public void selectRecipe_1() {
         if (isTurn) {
-            selectedRecipe = RECIPES.PISS1;
+            selectedRecipe = RECIPES.HEALING;
             System.Console.WriteLine(selectedRecipe);
             startCook = true;
             cameraChange.Camera_to_Cooking_room();

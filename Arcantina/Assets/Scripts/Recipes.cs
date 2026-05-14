@@ -1,3 +1,6 @@
 public enum RECIPES {
-    PISS1,
+    HEALING,
+    LOVE,
+    AMNESIA
+
 }
