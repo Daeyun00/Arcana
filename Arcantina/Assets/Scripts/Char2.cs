@@ -51,7 +51,7 @@ public class Char2 : MonoBehaviour
                         SetColor(cooktimer, Color.yellow);
                     }
                 }
-                else if (timer >= 10f) {
+                else if (timer >= 5f) {
                     if (cookedfor != COOKING_TIME.LIGHT) {
                         cookedfor = COOKING_TIME.LIGHT;
                         SetColor(cooktimer, Color.cyan);
@@ -89,6 +89,22 @@ public class Char2 : MonoBehaviour
     public void selectRecipe_1() {
         if (isTurn) {
             selectedRecipe = RECIPES.HEALING;
+            System.Console.WriteLine(selectedRecipe);
+            startCook = true;
+            cameraChange.Camera_to_Cooking_room();
+        }
+    }
+    public void selectRecipe_2() {
+        if (isTurn) {
+            selectedRecipe = RECIPES.AMNESIA;
+            System.Console.WriteLine(selectedRecipe);
+            startCook = true;
+            cameraChange.Camera_to_Cooking_room();
+        }
+    }
+    public void selectRecipe_3() {
+        if (isTurn) {
+            selectedRecipe = RECIPES.LOVE;
             System.Console.WriteLine(selectedRecipe);
             startCook = true;
             cameraChange.Camera_to_Cooking_room();

@@ -31,7 +31,7 @@ public class DialogueController : MonoBehaviour {
     private bool isTyping = false;         // Éppen fut-e a gépelés effekt
     private string currentFullText = "";    // Az aktuális teljes mondat tárolása
 
-    void Start() {
+    void OnEnable() {
         cameraChange = GetComponent<RoomController>();
         // A játék indításakor (vagy amikor a vevő odaér) elindítjuk
         if (dialogueLines.Count > 0) {
@@ -41,7 +41,7 @@ public class DialogueController : MonoBehaviour {
 
     void Update() {
         // Space billentyű figyelése
-        if (Input.GetKeyDown(KeyCode.Space)) {
+        if (Input.GetKeyUp(KeyCode.Space)) {
             if (isTyping) {
                 // 1. Ha még gépel a gép, a Space-re azonnal írja ki az egészet
                 CompleteTextImmediately();
@@ -111,10 +111,11 @@ public class DialogueController : MonoBehaviour {
     void EndDialogue() {
         dialoguePanel.SetActive(false);
         Debug.Log("Párbeszéd vége! Kezdődhet a munka.");
+        this.enabled = false;
         if (!utolso) {
             cameraChange.Camera_to_Prep_room();
         }
-
         finish = true;
+        
     }
 }

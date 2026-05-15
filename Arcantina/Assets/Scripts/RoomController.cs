@@ -4,41 +4,65 @@ using UnityEngine;
 
 public class RoomController : MonoBehaviour
 {
+    [Header("Cameras")]
     public Camera WaitingRoomCam;
     public Camera PrepRoomCam;
     public Camera CookingRoomCam;
     public Camera BottlingRoomCam;
 
-    void Awake() {
+    [Header("UI Canvases (Assign in Inspector!)")]
+    public GameObject WaitingRoomUI;
+    public GameObject PrepRoomUI;
+    public GameObject CookingRoomUI;
+    public GameObject BottlingRoomUI;
+
+    void Awake() 
+    {
         Camera_to_Waiting_room();
     }
+
+    // --- HELPER FUNCTION ---
+    // This turns EVERYTHING off so we start with a blank slate before turning a room on.
+    private void DeactivateAll() 
+    {
+        WaitingRoomCam.gameObject.SetActive(false);
+        PrepRoomCam.gameObject.SetActive(false);
+        CookingRoomCam.gameObject.SetActive(false);
+        BottlingRoomCam.gameObject.SetActive(false);
+
+        // We use "!= null" just in case you haven't assigned a UI yet, so it won't crash!
+        if (WaitingRoomUI != null) WaitingRoomUI.SetActive(false);
+        if (PrepRoomUI != null) PrepRoomUI.SetActive(false);
+        if (CookingRoomUI != null) CookingRoomUI.SetActive(false);
+        if (BottlingRoomUI != null) BottlingRoomUI.SetActive(false);
+    }
+
+    // --- ROOM SWITCHING ---
     public void Camera_to_Waiting_room()
     {
-        PrepRoomCam.enabled = false;
-        CookingRoomCam.enabled = false;
-        BottlingRoomCam.enabled = false;
-        WaitingRoomCam.enabled = true;
+        DeactivateAll(); // Turn everything off first
+        WaitingRoomCam.gameObject.SetActive(true); // Turn on the right camera
+        if (WaitingRoomUI != null) WaitingRoomUI.SetActive(true); // Turn on the right UI
     }
+
     public void Camera_to_Prep_room()
     {   
-        CookingRoomCam.enabled = false;
-        BottlingRoomCam.enabled = false;
-        WaitingRoomCam.enabled = false;
-        PrepRoomCam.enabled = true;
-
+        DeactivateAll();
+        PrepRoomCam.gameObject.SetActive(true);
+        if (PrepRoomUI != null) PrepRoomUI.SetActive(true);
     }
+
     public void Camera_to_Cooking_room()
     {
-        PrepRoomCam.enabled = false;
-        BottlingRoomCam.enabled = false;
-        WaitingRoomCam.enabled = false;
-        CookingRoomCam.enabled = true;
+        DeactivateAll();
+        CookingRoomCam.gameObject.SetActive(true);
+        if (CookingRoomUI != null) CookingRoomUI.SetActive(true);
     }
+
     public void Camera_to_Bottling_room()
     {
-        PrepRoomCam.enabled = false;
-        CookingRoomCam.enabled = false;
-        WaitingRoomCam.enabled = false;
-        BottlingRoomCam.enabled = true;
+        DeactivateAll();
+        BottlingRoomCam.gameObject.SetActive(true);
+        if (BottlingRoomUI != null) BottlingRoomUI.SetActive(true);
     }
 }

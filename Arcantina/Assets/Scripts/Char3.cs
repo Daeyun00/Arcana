@@ -93,6 +93,22 @@ public class Char3 : MonoBehaviour
             cameraChange.Camera_to_Cooking_room();
         }
     }
+    public void selectRecipe_2() {
+        if (isTurn) {
+            selectedRecipe = RECIPES.AMNESIA;
+            System.Console.WriteLine(selectedRecipe);
+            startCook = true;
+            cameraChange.Camera_to_Cooking_room();
+        }
+    }
+    public void selectRecipe_3() {
+        if (isTurn) {
+            selectedRecipe = RECIPES.LOVE;
+            System.Console.WriteLine(selectedRecipe);
+            startCook = true;
+            cameraChange.Camera_to_Cooking_room();
+        }
+    }
     
     //BOTTLE_BUTTONS
     public void Bottle1() {
