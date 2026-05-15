@@ -8,16 +8,17 @@ public class DialogueManager : MonoBehaviour
 
     DialogueController [] dialogues;
 
-    void awake() {
+    void Awake() {
         dialogues = FindObjectsOfType<DialogueController>();
 
         for(int i = 1; i < dialogues.Count(); i++) 
         {
             dialogues[i].enabled = false;
+            dialogues[i].dialoguePanel.SetActive(false);
         }
     }
 
-    void update()
+    void Update()
     {
         for(int i = 0; i < dialogues.Count(); i++) 
         {

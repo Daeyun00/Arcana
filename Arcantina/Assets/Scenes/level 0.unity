@@ -1857,6 +1857,8 @@ MonoBehaviour:
   speechText: {fileID: 2103819824}
   characterPortrait: {fileID: 32519383}
   dialoguePanel: {fileID: 350656398}
+  finish: 0
+  utolso: 0
   dialogueLines:
   - characterName: Valentin
     portrait: {fileID: 21300000, guid: cb28ad361e09e0a4ebd40b1956aae94a, type: 3}
@@ -5604,6 +5606,8 @@ MonoBehaviour:
   speechText: {fileID: 1171440740}
   characterPortrait: {fileID: 244223573}
   dialoguePanel: {fileID: 1072986320}
+  finish: 0
+  utolso: 0
   dialogueLines:
   - characterName: Valentin
     portrait: {fileID: 21300000, guid: cb28ad361e09e0a4ebd40b1956aae94a, type: 3}
@@ -6119,7 +6123,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &790513836
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6401,6 +6405,8 @@ MonoBehaviour:
   speechText: {fileID: 271111647}
   characterPortrait: {fileID: 1083872777}
   dialoguePanel: {fileID: 1326398806}
+  finish: 0
+  utolso: 0
   dialogueLines:
   - characterName: Valentin
     portrait: {fileID: 21300000, guid: cb28ad361e09e0a4ebd40b1956aae94a, type: 3}
@@ -7569,6 +7575,8 @@ MonoBehaviour:
   speechText: {fileID: 37833921}
   characterPortrait: {fileID: 1368743418}
   dialoguePanel: {fileID: 1419748701}
+  finish: 0
+  utolso: 0
   dialogueLines:
   - characterName: Igor
     portrait: {fileID: 21300000, guid: c9f7047e7f90e4a46b6479e59844c388, type: 3}
@@ -9266,7 +9274,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1097530778
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10007,7 +10015,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1173525868
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11147,7 +11155,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1427545746
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11871,7 +11879,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1538371615
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12137,6 +12145,8 @@ MonoBehaviour:
   speechText: {fileID: 1092844739}
   characterPortrait: {fileID: 477616212}
   dialoguePanel: {fileID: 1669139692}
+  finish: 0
+  utolso: 0
   dialogueLines:
   - characterName: Valentin
     portrait: {fileID: 21300000, guid: cb28ad361e09e0a4ebd40b1956aae94a, type: 3}
@@ -12764,6 +12774,8 @@ MonoBehaviour:
   speechText: {fileID: 1065144957}
   characterPortrait: {fileID: 1676200783}
   dialoguePanel: {fileID: 1879150975}
+  finish: 0
+  utolso: 0
   dialogueLines:
   - characterName: Bea
     portrait: {fileID: 21300000, guid: 19d1010b130ac114dbc7567fc1698743, type: 3}

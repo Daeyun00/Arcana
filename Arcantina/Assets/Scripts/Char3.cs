@@ -24,6 +24,7 @@ public class Char3 : MonoBehaviour
         recipe = Recipe.recipe_factory(recipeName);
         cameraChange = GetComponent<RoomController>();
         animator.Play("Forward_BL");//REPLACE
+        SetColor(cooktimer, Color.white);
     }
     void Update() {
         //COOKING UWU
