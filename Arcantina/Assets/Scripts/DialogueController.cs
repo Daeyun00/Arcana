@@ -4,13 +4,15 @@ using UnityEngine.UI; // Image komponens a portrékhoz
 using System.Collections;
 using System.Collections.Generic;
 
-public class DialogueManager : MonoBehaviour
+public class DialogueController : MonoBehaviour
 {
     [Header("UI Referenciák")]
     public TextMeshProUGUI nameText;       // A beszélő neve (pl. Valentin)
     public TextMeshProUGUI speechText;     // A beszéd szövege
     public Image characterPortrait;        // A karakter feje/portréja
     public GameObject dialoguePanel;       // A teljes UI panel
+
+    RoomController cameraChange;
 
     [System.Serializable]
     public class DialogueLine
@@ -30,6 +32,7 @@ public class DialogueManager : MonoBehaviour
 
     void Start()
     {
+        cameraChange = GetComponent<RoomController>();
         // A játék indításakor (vagy amikor a vevő odaér) elindítjuk
         if (dialogueLines.Count > 0)
         {
@@ -93,6 +96,8 @@ public class DialogueManager : MonoBehaviour
         {
             // Ha elfogytak a sorok
             EndDialogue();
+            cameraChange.Camera_to_Prep_room();
+            
         }
     }
 
