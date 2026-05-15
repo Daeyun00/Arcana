@@ -14,6 +14,9 @@ public class DialogueController : MonoBehaviour
 
     RoomController cameraChange;
 
+    public bool finish=false;
+    public bool utolso;
+
     [System.Serializable]
     public class DialogueLine
     {
@@ -96,7 +99,7 @@ public class DialogueController : MonoBehaviour
         {
             // Ha elfogytak a sorok
             EndDialogue();
-            cameraChange.Camera_to_Prep_room();
+
             
         }
     }
@@ -126,5 +129,11 @@ public class DialogueController : MonoBehaviour
     {
         dialoguePanel.SetActive(false);
         Debug.Log("Párbeszéd vége! Kezdődhet a munka.");
+        if (!utolso)
+        {
+           cameraChange.Camera_to_Prep_room(); 
+        }
+        
+        finish=true;
     }
 }
